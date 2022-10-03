@@ -525,6 +525,19 @@ export const { openModal, closeModal } = modalSlice.actions;
 export default modalSlice.reducer;
 ```
 
+- store.js
+
+```js
+import modalReducer from './features/modal/modalSlice';
+
+export const store = configureStore({
+  reducer: {
+    cart: cartReducer,
+    modal: modalReducer,
+  },
+});
+```
+
 - App.js
 
 ```js
